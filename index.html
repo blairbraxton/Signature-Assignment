@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blair's Bakery — Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="Blair's Bakery—fresh breads, pastries, and custom cakes." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="banner" style="background-image:url('images/home-banner.jpeg'); background-size:cover; background-position:center;">
+      <div class="overlay">
+        <h1 class="site-title">Blair's Bakery</h1>
+        <p class="site-subtitle">by Blair Braxton — Fresh daily. Made with care.</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html">Blair's Bakery</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu &amp; Pricing</a></li>
+        <li><a href="custom-order.html">Custom Ordering</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section container">
+      <div class="cta">
+        <p><strong>Pre-order today:</strong> Whole sourdough, pastry boxes, and custom celebration cakes.</p>
+        <a class="button" href="custom-order.html">Start a Custom Order</a>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Fresh From the Oven</h2>
+      <div class="card-grid" aria-label="Featured items">
+        <article class="card">
+          <img src="images/bread.png" alt="Artisan breads" />
+          <div class="content">
+            <h3>Sourdough &amp; Loaves</h3>
+            <p>Long-fermented sourdough, country loaves, focaccia, and brioche.</p>
+            <span class="badge">From $6</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/pastry.png" alt="Assorted pastries" />
+          <div class="content">
+            <h3>Morning Pastries</h3>
+            <p>Croissants, pain au chocolat, seasonal danishes, and muffins.</p>
+            <span class="badge">From $3</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/cake.png" alt="Custom cakes" />
+          <div class="content">
+            <h3>Custom Cakes</h3>
+            <p>Buttercream finishes, gluten-free options, and personalized messages.</p>
+            <span class="badge">From $35</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Why Blair's?</h2>
+      <p>We use simple ingredients, slow processes, and small-batch methods to bring out the best flavors in breads, pastries, and cakes. Order ahead for weekends, and ask about seasonal specials.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Blair's Bakery • Open Wed–Sun • Pre-orders recommended</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
