@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/simple.css">
+<style id="tnr-enforce">* { font-family: "Times New Roman", Times, serif !important; }</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="banner" style="background-image:url('images/banner.jpeg'); background-size:cover; background-position:center;">
+    <div class="overlay">
+      <h1 class="site-title">Contact</h1>
+      <p class="site-subtitle">Get in touch with our team.</p>
+    </div>
+  </div>
+</header>
+<nav class="navbar">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html"></a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu &amp; Pricing</a></li>
+        <li><a href="custom.html">Custom Ordering</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="services.html">Services &amp; Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+<main class="container">
+<h2>Contact</h2>
+<form id="contactForm" action="#" method="post" onsubmit="return validateForm();">
+  <fieldset>
+    <legend>Your Information</legend>
+    <p>
+      <label for="first_name">First Name *</label><br>
+      <input type="text" id="first_name" name="first_name" required minlength="2" maxlength="30" placeholder="Jane" onblur="capitalizeField(this);">
+    </p>
+    <p>
+      <label for="last_name">Last Name *</label><br>
+      <input type="text" id="last_name" name="last_name" required minlength="2" maxlength="30" placeholder="Doe" onblur="capitalizeField(this);">
+    </p>
+    <p>
+      <label for="email">Email *</label><br>
+      <input type="email" id="email" name="email" required placeholder="name@example.com">
+    </p>
+    <p>
+      <label for="phone">Phone (digits only)</label><br>
+      <input type="tel" id="phone" name="phone" pattern="\d{10}" placeholder="1234567890">
+    </p>
+    <p>
+      <label for="address">Street Address</label><br>
+      <input type="text" id="address" name="address" maxlength="80" placeholder="123 Main Street">
+    </p>
+    <p>
+      <label for="city">City *</label><br>
+      <input type="text" id="city" name="city" required maxlength="40" placeholder="Cincinnati" onblur="capitalizeField(this);">
+    </p>
+    <p>
+      <label for="state">State *</label><br>
+      <input type="text" id="state" name="state" required maxlength="2" placeholder="OH">
+    </p>
+    <p>
+      <label for="zip">ZIP Code *</label><br>
+      <input type="text" id="zip" name="zip" required maxlength="10" placeholder="45202">
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Reason for Contact</legend>
+    <p>
+      <label for="subject">Subject *</label><br>
+      <select id="subject" name="subject" required>
+        <option value="">-- Please choose --</option>
+        <option value="order">Order Question</option>
+        <option value="custom">Custom Design</option>
+        <option value="menu">Menu Item</option>
+        <option value="catering">Catering or Events</option>
+        <option value="feedback">Feedback</option>
+        <option value="other">Other</option>
+      </select>
+    </p>
+    <p>
+      <label for="message">Message *</label><br>
+      <textarea id="message" name="message" required rows="6" cols="40" placeholder="Write your message here..."></textarea>
+    </p>
+    <p>
+      Preferred Contact:
+      <label><input type="radio" name="contact_pref" value="email" checked> Email</label>
+      <label><input type="radio" name="contact_pref" value="phone"> Phone</label>
+    </p>
+    <p>
+      <label><input type="checkbox" id="agree" name="agree" required> I confirm the information is accurate *</label>
+    </p>
+  </fieldset>
+
+  <p>
+    <button type="submit">Send</button>
+    <button type="reset">Reset</button>
+  </p>
+  <p id="formErrors" style="color:#b00020; font-weight:600;"></p>
+</form>
+</main>
+<footer class="footer"><p>© 2025 Blair's Bakery</p></footer>
+
+<script>
+  function capitalizeWords(value) {
+    if (!value) return "";
+    return value
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, " ")
+      .split(" ")
+      .map(function(word) {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+      })
+      .join(" ");
+  }
+
+  function capitalizeField(field) {
+    if (field && field.value) {
+      field.value = capitalizeWords(field.value);
+    }
+  }
+
+  function validateForm() {
+    var errors = [];
+
+    var firstName = document.getElementById("first_name");
+    var lastName = document.getElementById("last_name");
+    var city = document.getElementById("city");
+    var zip = document.getElementById("zip");
+    var email = document.getElementById("email");
+    var agree = document.getElementById("agree");
+    var message = document.getElementById("message");
+    var subject = document.getElementById("subject");
+
+    // Apply capitalization as part of validation
+    capitalizeField(firstName);
+    capitalizeField(lastName);
+    capitalizeField(city);
+
+    if (!firstName.value.trim()) {
+      errors.push("Please enter your first name.");
+    }
+    if (!lastName.value.trim()) {
+      errors.push("Please enter your last name.");
+    }
+    if (!city.value.trim()) {
+      errors.push("Please enter your city.");
+    }
+
+    var zipValue = zip.value.trim();
+    var zipPattern = /^\d{5}(-\d{4})?$/;
+    if (!zipValue || !zipPattern.test(zipValue)) {
+      errors.push("Please enter a valid ZIP code (##### or #####-####).");
+    }
+
+    var emailValue = email.value.trim();
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailValue || !emailPattern.test(emailValue)) {
+      errors.push("Please enter a valid email address.");
+    }
+
+    if (!subject.value) {
+      errors.push("Please choose a subject.");
+    }
+
+    if (!message.value.trim()) {
+      errors.push("Please enter a message.");
+    }
+
+    if (!agree.checked) {
+      errors.push("Please confirm that your information is accurate.");
+    }
+
+    var errorContainer = document.getElementById("formErrors");
+    if (errors.length > 0) {
+      errorContainer.textContent = errors.join(" ");
+      return false;
+    } else {
+      errorContainer.textContent = "";
+      alert("Thank you! Your message has been submitted.");
+      return true;
+    }
+  }
+</script>
+
+</body>
+</html>
