@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Bakery — Menu & Pricing</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/simple.css">
+<meta name="description" content=" Bakery menu and pricing for breads, pastries, and cakes." />
+<style id="tnr-enforce">* { font-family: "Times New Roman", Times, serif !important; }</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="banner" style="background-image:url('images/banner.jpeg'); background-size:cover; background-position:center;">
+      <div class="overlay">
+        <h1 class="site-title">Menu &amp; Pricing</h1>
+        <p class="site-subtitle">Artisan breads, morning pastries, and custom cakes.</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html"></a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a aria-current="page" href="menu.html">Menu &amp; Pricing</a></li>
+        <li><a href="custom.html">Custom Ordering</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="services.html">Services &amp; Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container section">
+    <h2>Daily Breads</h2>
+    <div class="table-wrap" role="region" aria-label="Bread pricing">
+      <table class="menu-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Item">Country Sourdough</td>
+            <td data-label="Size">750g loaf</td>
+            <td data-label="Price">$8</td>
+            <td data-label="Notes">72-hour fermentation</td>
+          </tr>
+          <tr>
+            <td data-label="Item">Focaccia</td>
+            <td data-label="Size">Half sheet</td>
+            <td data-label="Price">$12</td>
+            <td data-label="Notes">Rosemary &amp; sea salt</td>
+          </tr>
+          <tr>
+            <td data-label="Item">Brioche</td>
+            <td data-label="Size">Loaf</td>
+            <td data-label="Price">$7</td>
+            <td data-label="Notes">Rich &amp; buttery</td>
+          </tr>
+          <tr>
+            <td data-label="Item">Bagels (Plain or Everything)</td>
+            <td data-label="Size">Each</td>
+            <td data-label="Price">$2.50</td>
+            <td data-label="Notes">Made fresh daily</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="menu-note">Bread is baked Wednesday–Sunday. Whole loaves only; slicing available on request.</p>
+
+    <h2 style="margin-top:2rem;">Morning Pastries</h2>
+    <div class="table-wrap" role="region" aria-label="Pastry pricing">
+      <table class="menu-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Item">Butter Croissant</td>
+            <td data-label="Qty">1</td>
+            <td data-label="Price">$3.75</td>
+            <td data-label="Notes">All-butter laminated dough</td>
+          </tr>
+          <tr>
+            <td data-label="Item">Pain au Chocolat</td>
+            <td data-label="Qty">1</td>
+            <td data-label="Price">$4.25</td>
+            <td data-label="Notes">Dark chocolate batons</td>
+          </tr>
+          <tr>
+            <td data-label="Item">Seasonal Danish</td>
+            <td data-label="Qty">1</td>
+            <td data-label="Price">$4.50</td>
+            <td data-label="Notes">Fruit varies weekly</td>
+          </tr>
+          <tr>
+            <td data-label="Item">Pastry Box</td>
+            <td data-label="Qty">6</td>
+            <td data-label="Price">$21</td>
+            <td data-label="Notes">Assorted selection</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-top:2rem;">Custom Cakes</h2>
+    <div class="table-wrap" role="region" aria-label="Cake pricing">
+      <table class="menu-table">
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Serves</th>
+            <th>Base Price</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Size">6&quot; round</td>
+            <td data-label="Serves">8–10</td>
+            <td data-label="Base Price">$35</td>
+            <td data-label="Notes">1 flavor, simple décor</td>
+          </tr>
+          <tr>
+            <td data-label="Size">8&quot; round</td>
+            <td data-label="Serves">12–16</td>
+            <td data-label="Base Price">$50</td>
+            <td data-label="Notes">Popular option</td>
+          </tr>
+          <tr>
+            <td data-label="Size">Quarter sheet</td>
+            <td data-label="Serves">20–24</td>
+            <td data-label="Base Price">$75</td>
+            <td data-label="Notes">Custom message included</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="menu-note">Buttercream finishes included. Add-ons (florals, complex piping, dietary requests) quoted separately.</p>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Blair's Bakery</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
